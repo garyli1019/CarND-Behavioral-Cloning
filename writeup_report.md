@@ -28,6 +28,7 @@ The goals / steps of this project are the following:
 #### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
 My project includes the following files:
+* run1.mp4 video of autonomous driving mode
 * model.py containing the script to create and train the model
 * drive.py for driving the car in autonomous mode
 * model.h5 containing a trained convolution neural network 
@@ -71,7 +72,6 @@ I tried couples different driving strategies. The first one was collecting as mu
 I tried Lenet before used the Nvidia net, but the result wasn't that great. Then I used the Nvidia net directly, because I guessed the Nvidia net might be the best to handle this kind of data, otherwise we won't learn it from the lecture. I didn't change the main architecture, but only add two dropout layers for testing purpose. But the final model I used was exactly the same as Nvidia net.
 
 #### 2. Final Model Architecture
-`
 * model = Sequential()
 * model.add(Lambda(lambda x: x / 255.0 - 0.5, input_shape=(160,320,3)))
 * model.add(Cropping2D(cropping=((50,20),(0,0))))
@@ -82,7 +82,6 @@ I tried Lenet before used the Nvidia net, but the result wasn't that great. Then
 * model.add(Convolution2D(64,3,3,activation="relu"))
 * model.add(Flatten())
 * model.add(Dense(100))
-`
 
 #### 3. Creation of the Training Set & Training Process
 
